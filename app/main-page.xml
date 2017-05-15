@@ -17,7 +17,8 @@ https://docs.nativescript.org/ui/components.
         <Button text="add Note" tap="{{ goToNote }}" class="btn btn-primary btn-active"/>
   <ListView items="{{ myItems }}" class="list-group">
     <ListView.itemTemplate class="list-group-item">
-       <Label text="{{ title }}" textWrap="true" class="title" />
+       <Label text="{{ getTitle()}} " textWrap="true" class="title" />
+    
     </ListView.itemTemplate>
  </ListView>
     </StackLayout>

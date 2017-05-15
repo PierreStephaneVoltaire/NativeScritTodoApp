@@ -5,20 +5,16 @@ import{note}from './utils/note-component';
 import {ObservableArray} from 'tns-core-modules/data/observable-array'
 export class HelloWorldModel extends Observable {
     //database object
-   myItems = new ObservableArray();
+   myItems:ObservableArray<any> = new ObservableArray();
    db:noteDatabase;
     constructor() {
         super();
         let db:noteDatabase=new noteDatabase();
         db.createTable();
-        this.db = db
-        db.pushAllNotes(this.myItems)
-
+        this.db = db;
+        db.pushAllNotes(this.myItems);
     }
    
-
-    textSource = "stuff";
-    
 
     goToNote() {
         let topmost = frameModule.topmost();

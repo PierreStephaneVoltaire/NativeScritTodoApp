@@ -30,7 +30,6 @@ export class noteDatabase {
         });
 
 
-
     }
 
     insertNote(tempNote: note) {
@@ -48,15 +47,13 @@ export class noteDatabase {
 
 
 
-    pushAllNotes(items) {
+    pushAllNotes(items):void {
         this.db_promise.then(function (db) {
             return db.each('select * from task',
                 function (err, row) {
                     console.log("Row results it:", row); // Prints ["Row x Field_1", "Row x Field 2"...] for each row passed to it
-                    let temp = new note();
-                    temp.setTitle(row[0]);
-                    temp.setDescrition(row[1]);
-                    console.log(temp.getDescrition());
+                    let temp = new note(row[0],row[1]);
+                    console.log(row[0]+"   "+row[1])
                     items.push(temp);
                 },
                 function (err, count) {

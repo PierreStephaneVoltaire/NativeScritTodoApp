@@ -1,9 +1,9 @@
 export class note{
 private title:string;
 private descrition:string;
-constructor(){
-    this.title="";
-    this.descrition="";
+constructor(title:string,description:string){
+    this.title=title;
+    this.descrition=description;
 }
 	public getTitle(): string {
 		return this.title;

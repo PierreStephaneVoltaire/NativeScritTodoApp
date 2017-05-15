@@ -30,9 +30,7 @@ dialogs.alert(errMessage).then(()=> {
     console.log(errMessage);
 });
 if(errMessage.match("")){
-let tempNote=new note();
-tempNote.setTitle(this.title);
-tempNote.setDescrition(this.tasks);
+let tempNote=new note(this.title,this.tasks);
 this.db.insertNote(tempNote);
 }
 }

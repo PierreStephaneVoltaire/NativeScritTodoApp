@@ -1,0 +1,21 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="Note" icon="" class="action-bar">
+        
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout class="p-20" orientation="vertical">
+    <label text="Title"/>
+   <TextField text="{{ title }}" hint="enter the title"/>
+   <label text="tasks"/>
+ <TextView text="{{ tasks}}" hint="enter tasks" />
+  <Button text="Save" tap="{{save}}" class="btn btn-primary btn-active"/>
+   <Button text="add Note"  class="btn btn-primary btn-active"/>
+    
+      </StackLayout> 
+</Page>

@@ -25,13 +25,15 @@ dialogs.alert(errMessage).then(()=> {
 }); 
 }
 if(this.tasks==null||this.tasks.trim().length<=0||this.tasks==""){
-    errMessage="tasks can't be empty";}
+    errMessage="tasks can't be empty";
 dialogs.alert(errMessage).then(()=> {
     console.log(errMessage);
-});
+});}
 if(errMessage.match("")){
 let tempNote=new note(this.title,this.tasks);
 this.db.insertNote(tempNote);
+let topmost = frameModule.topmost();
+topmost.goBack();
 }
 }
 

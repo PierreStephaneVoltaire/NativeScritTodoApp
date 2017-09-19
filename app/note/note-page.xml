@@ -15,7 +15,7 @@
    <label text="tasks"/>
  <TextView text="{{ tasks}}" hint="enter tasks" />
   <Button text="Save" tap="{{save}}" class="btn btn-primary btn-active"/>
-   <Button text="add Note"  class="btn btn-primary btn-active"/>
+ 
     
       </StackLayout> 
 </Page>
